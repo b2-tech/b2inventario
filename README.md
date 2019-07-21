@@ -1,1 +1,2 @@
-# b2inventario
+# B2Iventario
+Sistema de coletor de dados
