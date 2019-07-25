@@ -7,15 +7,14 @@ import {
 import HomeScreen from '~/pages/HomeScreen';
 import LoginScreen from '~/pages/LoginScreen';
 import ScanScreen from '~/pages/ScanScreen';
-import InventScreen from './pages/InventScreen';
+import InventScreen from '~/pages/InventScreen';
+import ControleScreen from '~/pages/ControleScreen';
 
 const AppStack = createSwitchNavigator({
   Home: HomeScreen,
   Inventario: InventScreen,
-});
-
-const ScanStack = createSwitchNavigator({
-  Scan: ScanScreen,
+  Controle: ControleScreen,
+  Scan: ScanScreen
 });
 
 const AuthStack = createSwitchNavigator({
@@ -23,7 +22,7 @@ const AuthStack = createSwitchNavigator({
 });
 
 const TestStack = createSwitchNavigator({
-  Test: InventScreen,
+  Test: LoginScreen,
 });
 
 const Routes = createAppContainer(
@@ -32,10 +31,9 @@ const Routes = createAppContainer(
       Auth: AuthStack,
       App: AppStack,
       Test: TestStack,
-      Scan: ScanStack
     },
     {
-      initialRouteName: 'Test',
+      initialRouteName: 'Auth',
     }
   )
 );

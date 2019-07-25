@@ -19,7 +19,7 @@ class ProductScanRNCamera extends Component {
   }
 
   onBarCodeRead(scanResult) {
-    Alert.alert("Numero K&M é "+scanResult.data ,"Tipo de Codigo "+scanResult.type);
+    Alert.alert("Numero K&M é "+scanResult.data ," Tipo de Codigo "+scanResult.type, "Leia o Proximo");
     if (scanResult.data != null) {
       if (!this.barcodeCodes.includes(scanResult.data)) {
         this.barcodeCodes.push(scanResult.data);
@@ -88,7 +88,7 @@ class ProductScanRNCamera extends Component {
             onPress={() => { Alert.alert("Botão Clicado");
             ; }}
             style={styles.enterBarcodeManualButton}
-            title="Cancelar"
+            title="Mudar Modelo"
           />
         </View>
       </View>
