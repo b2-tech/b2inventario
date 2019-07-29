@@ -49,22 +49,15 @@ class ProductScanRNCamera extends Component {
   async incluirItem() {
     try {
       const dados = JSON.parse(this.props.navigation.getParam('inventarioParam', '1'));
-      Alert.alert(
-        'Tipo de Codigo?',
-        [
-          { text: 'KM', onPress: () => dados.idKM = parseInt(this.state.codigo) },
-          { text: 'Serie', onPress: () => dados.idSerie = parseInt(this.state.codigo) },
-        ],
-        { cancelable: false },
-      );
       const response = await api.post('/inventarios', {
-        idKM: dados.idKM,
+        idKM: dados.idKM = parseInt(this.state.codigo),
         idSerie: parseInt(dados.idSerie),
         idControle: parseInt(dados.idControle),
         usuario: dados.usuario,
         idModelo: parseInt(dados.idModelo),
         idLocal: parseInt(dados.idLocal),
         idUsuario: parseInt(dados.idUsuario),
+        mesa: dados.mesa,
       });
       Alert.alert(
         'Codigo Cadastrado',

@@ -94,7 +94,7 @@ export default class App extends React.Component {
 
     handleScanCodigo = async () => {
       const {
-        controle, usuarioSelected, modeloSelected, localSelected,
+        controle, usuarioSelected, modeloSelected, localSelected, mesaSelected,
       } = this.state;
       if (usuarioSelected === null || modeloSelected.length === 0 || localSelected.length === 0) {
         Alert.alert('Alerta', 'Informações obrigatorias');
@@ -109,6 +109,8 @@ export default class App extends React.Component {
           idModelo: modeloSelected,
           idLocal: localSelected,
           idUsuario: usuario.id,
+          mesa: mesaSelected,
+
         };
         const item = JSON.stringify(itemInventario);
         this.props.navigation.navigate('Scan', { inventarioParam: item });
