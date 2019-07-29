@@ -15,12 +15,21 @@ export const ImageIssueMain = styled.Image`
   width: 200px;
 `;
 
+export const ViewLoad = styled.View`
+  flex: 1;
+  padding-top: 20;
+  justify-content: center;
+`;
+
+
 export const TextIssueMain = styled.Text`
   font-size: 24px;
   margin-top: 32px;
   margin-left: 56px;
   margin-right: 56px;
 `;
+
+export const ActivityIndicatorLoad = styled.ActivityIndicator``;
 
 export const ContainerButtonIssueMain = styled.View`
   align-items: flex-end;

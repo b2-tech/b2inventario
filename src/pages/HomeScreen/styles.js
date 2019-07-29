@@ -10,6 +10,13 @@ export const ContainerImageIssueMain = styled.View`
   align-items: center;
 `;
 
+export const ViewLoad = styled.View`
+  flex: 1;
+  padding-top: 20;
+  justify-content: center;
+`;
+
+
 export const ImageIssueMain = styled.Image`
   height: 200px;
   width: 200px;
@@ -21,6 +28,8 @@ export const TextIssueMain = styled.Text`
   margin-left: 56px;
   margin-right: 56px;
 `;
+
+export const ActivityIndicatorLoad = styled.ActivityIndicator``;
 
 export const ContainerButtonIssueMain = styled.View`
   align-items: flex-end;

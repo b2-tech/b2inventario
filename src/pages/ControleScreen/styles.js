@@ -4,6 +4,14 @@ export const Container = styled.View`
   flex: 1;
 `;
 
+export const ViewLoad = styled.View`
+  flex: 1;
+  padding-top: 20;
+  justify-content: center;
+`;
+
+export const ActivityIndicatorLoad = styled.ActivityIndicator``;
+
 export const ContainerImageIssueMain = styled.View`
   flex: 2;
   justify-content: center;

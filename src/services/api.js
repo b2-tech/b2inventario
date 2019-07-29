@@ -6,9 +6,11 @@ import axios from 'axios';
 ** Simulador IOS:           http://localhost:3333/
 */
 const api = axios.create({
-  baseURL: 'http://10.0.2.2:3000/',
-  // baseURL: 'http://192.168.0.101:3000/',
+  // baseURL: 'http://10.0.2.2:3000/',
+  baseURL: 'http://192.168.0.101:3000/',
   // baseURL: 'http://10.14.0.54.:3000/',
+  // baseURL: 'http://b2inventario.appspot.com/',
+
 });
 
 
